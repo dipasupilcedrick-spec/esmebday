@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>
+            Happy birhtday loviee ko
+        </title>
+    </head>
+    <body>
+        <div class="container-box">
+             <div class="hi"> HI MY LOVE HAPPY BIRTHDAY!!</div>
+             <div class="pw"> hulaan mo password<br>
+                hint: favorite part mo sakin
+             </div>
+
+             <div id="floating-hearts"></div>
+             
+             <input type="password" placeholder="enter password" id="pass">
+             <button onclick="checkPass()">submit</button>
+            
+             
+             <script>
+                function checkPass(){
+                 var password = document.getElementById("pass").value;
+
+                 if(password == "tite"){
+                    
+                   window.location.href = "extent.html";
+                  }else{
+                    alert("maliiii!! hints: yung isa pa and fav mo siyang sinasabi");
+                  }
+                  }
+                  const heartImages = [
+            "esme (1).jpg",
+            "esme (2).jpg",
+            "esme (3).jpg",
+            "esme (4).jpg",
+            "esme (5).jpg"
+            ];
+
+            function createHeart() {
+                const heart = document.createElement("div");
+                
+                if (Math.random() < 0.5) {
+                    heart.classList.add("heart");
+                    heart.innerHTML = "❤";
+                } else {
+                    heart.classList.add("heart-photo")
+                    const img = document.createElement("img");
+                    img.src = heartImages[Math.floor(Math.random() * heartImages.length)];
+                    heart.appendChild(img);
+                }
+
+                heart.style.left = Math.random() * window.innerWidth + "px";
+
+                document.body.appendChild(heart);
+
+                setTimeout(() => {
+                    heart.remove();
+                }, 6000);
+            }
+
+            setInterval(createHeart, 300);
+
+                        </script>
+                </div>
+       
+    </body>
+</html>
