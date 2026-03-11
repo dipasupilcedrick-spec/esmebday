@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Birthday ❤️</title>
+<link rel="stylesheet" href="design.css">
+</head>
+
+<body>
+    <audio id="bg-music" loop>
+             <source src="lover.mp3" type="audio/mpeg">
+            
+             </audio>
+
+<h1>Happy Birthday My Love ❤️</h1>
+
+
+
+<div class="nav">
+<button onclick="showSection('love')">I Love You</button>
+<button onclick="showSection('photos')">Memories</button>
+<button onclick="showSection('songs')">Songs</button>
+<button onclick="showSection('promise')">Verse</button>
+</div>
+
+<div class="hearts">
+<span>❤️</span>
+<span>💖</span>
+<span>💕</span>
+<span>💗</span>
+<span>💓</span>
+</div>
+
+
+
+<div id="love" class="section hidden">
+
+<button onclick="openLetter()">Open My Letter 💌 <br>
+                             sa huli nato please hehe
+</button>
+
+<div class="envelope" id="envelope" onclick="openLetter(); playMusic();">
+    
+<div class="flap"></div>
+
+<div class="letter" id="letter">
+    <p id="letter-text"></p>
+<p>
+
+</p>
+</div>
+
+</div>
+</div>
+
+<div id="photos" class="section hidden">
+
+<h2>Our Memories 📸</h2>
+
+<div class="gallery">
+<img src="pic (1).jpg">
+<img src="pic (2).jpg">
+<img src="pic (3).jpg">
+<img src="pic (4).jpg">
+<img src="pic (5).jpg">
+<img src="pic (6).jpg">
+<img src="pic (7).jpg">
+<img src="pic (8).jpg">
+<img src="pic (9).jpg">
+<img src="pic (10).jpg">
+<img src="pic (11).jpg">
+<img src="pic (12).jpg">
+<img src="pic (11).jpg">
+<img src="pic (13).jpg">
+<img src="pic (14).jpg">
+<img src="pic (15).jpg">
+<img src="pic (16).jpg">
+<img src="pic (17).jpg">
+<img src="pic (18).jpg">
+<img src="pic (19).jpg">
+<img src="pic (20).jpg">
+
+
+</div>
+
+</div>
+
+<div id="songs" class="section hidden">
+
+<h2>Your Favorite Songs 🎵</h2>
+<div class="song-container">
+
+<div class="song-item">
+  <img src="you'llbesafehere.jpg" alt="you'll be safe here">
+  <div class="song-info">
+    <p>You'll Be Safe Here - Rico Blanco</p>
+    <audio controls>
+      <source src="youllbesafehere.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+
+<div class="song-item" id="aty">
+  <img src="a thousand years.jpg" alt="A Thousand Years">
+  <div class="song-info">
+    <p>A Thousand Years - Christina Perri</p>
+    <audio controls>
+      <source src="athousandyears.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+
+<div class="song-item" id="aty">
+  <img src="umaasa.jpg" alt="umaasa">
+  <div class="song-info">
+    <p>Umaasa - calein</p>
+    <audio controls>
+      <source src="umaasa.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</div>
+
+
+<div class="song-item">
+  <img src="yoursong.jpg" alt="Your Song">
+  <div class="song-info">
+    <p>Your Song - Parokya ni Edgar</p>
+    <audio controls>
+      <source src="your song.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+  </div>
+
+  </div>
+
+  </div>
+
+<div id="promise" class="section hidden">
+
+<h2>our favorite bible verse❤️</h2>
+<div class="verse-container">
+
+<div class="verse-item"> 
+    <h2> "When the Time is Right, I, The Lord will make it Happen."</h2>
+    <p> Isiah 60:22 </p>
+</div>
+<div class="verse-item">
+
+    <h2> “I can do all things through him who strengthens me.”</h2>
+    <p> philippians 4:13</p>
+</div>
+
+</div>
+
+</div>
+
+<div id="floating-hearts"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

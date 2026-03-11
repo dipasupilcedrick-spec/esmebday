@@ -1,0 +1,136 @@
+body{
+    height: 100vh;           
+    margin: 0;               
+    display: flex;          
+    justify-content: center; 
+    align-items: center;      
+    background-color: #b76ce3; 
+}
+
+.container-box{
+    background-color: white; 
+    padding: 30px 50px;      
+    border-radius: 15px;     
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+    text-align: center;      
+}
+.hi{
+    font-family: cursive;
+    font-size: 25px;
+    font-weight: bold;
+    color: #b76ce3;
+
+}
+.pw{
+    font-size: 12px;
+    font-weight: bold;
+
+}
+
+input{
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button{
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ff69b4; 
+    color: white;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #ff1493;
+}
+.heart{
+position:absolute;
+color:#ff4d6d;
+font-size:20px;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0);
+opacity:1;
+}
+100%{
+transform:translateY(-800px);
+opacity:0;
+}
+}
+
+#floating-hearts {
+    position: fixed;   
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.heart-photo{
+position:absolute;
+width:150px;
+height:150px;
+bottom:-150px;
+bottom: 0px;
+animation:float 6s linear infinite;
+}
+
+.heart-photo::before,
+.heart-photo::after{
+content:"";
+position:absolute;
+width:75px;
+height:120px;
+background:#ff4d6d;
+border-radius:75px 75px 0 0;
+opacity: 5%;
+}
+
+.heart-photo::before{
+left:75px;
+transform:rotate(-45deg);
+transform-origin:0 100%;
+}
+
+.heart-photo::after{
+left:0;
+transform:rotate(45deg);
+transform-origin:100% 100%;
+}
+
+.heart-photo img{
+ height: 100px; 
+  aspect-ratio: 1;
+  --_m: radial-gradient(#000 69%,#0000 70%) 84.5%/50%;
+  -webkit-mask-box-image: var(--_m);
+             mask-border: var(--_m);
+  clip-path: polygon(-41% 0,50% 91%, 141% 0);
+  background: #cc333f;
+}
+@supports not (-webkit-mask-box-image: var(--_m)) { 
+  .heart {
+    mask:
+     radial-gradient(at 70% 31%,#000 29%,#0000 30%),
+     radial-gradient(at 30% 31%,#000 29%,#0000 30%),
+     conic-gradient(#000 0 0) bottom/100% 50% no-repeat;
+  }
+}
+
+
+@keyframes float{
+0%{
+transform:translateY(0) scale(1);
+opacity:1;
+}
+100%{
+transform:translateY(-800px) scale(1.2);
+opacity:0;
+}
+}
